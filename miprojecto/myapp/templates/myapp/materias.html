@@ -1,11 +1,21 @@
 {% extends "myapp/layout.html" %}
 {% block contenido %}
+{% load static %}
 <div class="container">
       <h1 class="title">
-        Hola mundo! {{ nombre }}  
+        Materias:
       </h1>
       <p>desde  -> {{ path }}</p>
 
+	<img src="{% static 'myapp/python.png' %}" />
+      {% for x in materias %}
+     	 {% if x == "python" %}
+      	<li><b> {{ x }}</b> 
+			 </li>
+	{% else %}
+      	<li> {{ x }} </li>
+     	 {% endif %}
+      {% endfor %}
 
       <a href="{% url 'index' %}">Index</a> |
       <a href="{% url 'materias' %}">materias</a> | 
