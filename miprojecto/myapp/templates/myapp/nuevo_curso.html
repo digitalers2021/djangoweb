@@ -1,0 +1,13 @@
+{% extends "myapp/layout.html" %}
+{% block contenido %}
+{% load static %}
+
+<form method="POST" >
+{% csrf_token %}
+{{  formulario.as_p }}
+<button>Enviar</button>
+</form>
+
+
+
+{% endblock %}

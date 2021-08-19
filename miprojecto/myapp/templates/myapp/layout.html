@@ -8,7 +8,11 @@
   <body>
   <section class="section">
 	  {% block contenido %}
-	  {% endblock %}
+	  {% endblock contenido %}
+	  {% block contenido2 %}
+	  <h1>Hola </h1>
+	  <b>Contenido desde la plantilla de layout</b>
+	  {% endblock contenido2 %}
   </section>
   </body>
 </html>
